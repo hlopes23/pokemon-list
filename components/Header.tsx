@@ -13,7 +13,7 @@ const [pokemon, setPokemon] = useState<string>("");
    }
 
   return (
-    <header className="flex flex-row justify-around items-center pl-4 pr-4 backdrop-blur-md">
+    <header className="flex flex-row justify-around items-center backdrop-blur-md mt-8 mb-8">
         <Image
           src="/logo.png"
           alt="Pokemon Logo"
@@ -21,14 +21,14 @@ const [pokemon, setPokemon] = useState<string>("");
           height={250}
         />
       <div className="text-center">
-        <p className="m-[0]">
+        <p className="m-0">
           PICK A POKÉMON FROM THE ADVENTURES <strong>RED, GREEN,</strong>
         </p>
-        <p className="m-[0]">
+        <p className="m-0">
           <strong>BLUE & YELLOW</strong> TO SEE ITS INFO.
         </p>
       </div>
-      <Input id="pokemon-search"
+      <Input
         value={pokemon}
         onChange={handleOnChange}
         placeholder="Find Pokémon..."
