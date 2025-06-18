@@ -6,10 +6,10 @@ import { useState } from "react";
 
 export default function Header() {
 
-const [pokemon, setPokemon] = useState<string>("");
+const [input, setInput] = useState<string>("");
 
    const handleOnChange = (e : React.ChangeEvent<HTMLInputElement>) => {
-    setPokemon(e.target.value);
+    setInput(e.target.value);
    }
 
   return (
@@ -29,7 +29,7 @@ const [pokemon, setPokemon] = useState<string>("");
         </p>
       </div>
       <Input
-        value={pokemon}
+        value={input}
         onChange={handleOnChange}
         placeholder="Find Pokémon..."
         />
