@@ -13,10 +13,11 @@ const [input, setInput] = useState<string>("");
    }
 
   return (
-    <header className="flex flex-row justify-around items-center backdrop-blur-md mt-8 mb-8">
+    <header className="flex flex-row h-[15%] justify-around items-center backdrop-blur-md mt-8 mb-8">
         <Image
           src="/logo.png"
           alt="Pokemon Logo"
+          priority={false}
           width={250}
           height={250}
         />
