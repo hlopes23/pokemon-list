@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: linear-gradient(#AFEBCA, #4e8658);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  margin:0;
+  background: var(--background);
+  height: 100vh;
+}
