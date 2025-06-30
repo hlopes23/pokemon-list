@@ -13,8 +13,8 @@ export default function Card( {pokemon} : {pokemon: PokemonGridDisplay}) {
       <Image
        src={pokemon.image}
         alt={pokemon.name}
-        width={170}
-        height={170}
+        width={150}
+        height={150}
         priority= {false}
        className="mx-auto mb-3 h-[60%]"></Image>
       <div className=" text-lg p-4 text-center capitalize bg-white/20 rounded-md w-full mx-auto">

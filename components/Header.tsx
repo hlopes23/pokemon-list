@@ -2,15 +2,12 @@
 
 import Image from "next/image";
 import Input from "./Input";
-import { useState } from "react";
+import { useSearch } from "../context/SearchContext"
 
 export default function Header() {
 
-const [input, setInput] = useState<string>("");
+const { search, setSearch } = useSearch();
 
-   const handleOnChange = (e : React.ChangeEvent<HTMLInputElement>) => {
-    setInput(e.target.value);
-   }
 
   return (
     <header className="flex flex-row h-[15%] justify-around items-center backdrop-blur-md mt-8 mb-8">
@@ -30,8 +27,8 @@ const [input, setInput] = useState<string>("");
         </p>
       </div>
       <Input
-        value={input}
-        onChange={handleOnChange}
+        value={search}
+        onChange={e => setSearch(e.target.value)}
         placeholder="Find Pokémon..."
         />
     </header>
