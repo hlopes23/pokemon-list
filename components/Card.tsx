@@ -13,7 +13,7 @@ export default function Card({ pokemon }: { pokemon: PokemonGridDisplay }) {
     const regex = new RegExp(`(${search})`, "ig");
     return name.split(regex).map((part, i) =>
       part.toLowerCase() === search.toLowerCase() ? (
-        <span key={i} className="bg-green-500 rounded px-1">{part}</span>
+        <span key={i} className="bg-green-500 rounded">{part}</span>
       ) : (
         part
       )
