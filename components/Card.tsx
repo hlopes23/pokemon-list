@@ -3,8 +3,9 @@
 import Image from "next/image";
 import { useSearch } from "../context/SearchContext";
 import { PokemonGridDisplay } from "../interfaces/Pokemon";
+import { CardProps } from "../interfaces/CardProps";
 
-export default function Card({ pokemon }: { pokemon: PokemonGridDisplay }) {
+export default function Card({ pokemon , onClick }: CardProps) {
   const { search } = useSearch();
 
 
@@ -21,7 +22,7 @@ export default function Card({ pokemon }: { pokemon: PokemonGridDisplay }) {
   }
 
   return (
-    <div className="bg-white/20 h-[280px] w-[80%] border border-white/30 rounded-lg shadow-lg p-4">
+    <div className="bg-white/20 h-[280px] w-[80%] border cursor-pointer border-white/30 rounded-lg shadow-lg p-4">
       <div className="flex flex-col justify-between items-center rounded-md h-full">
       <Image
        src={pokemon.image}
