@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { useSelect } from "../context/SelectContext";
+import { useSelection } from "../context/SelectContext";
 import { InfoRowProps, TitleRowProps, AditionalInfoProps } from "../interfaces/Pokemon";
 
 
-const { selectedPokemon } = useSelect();
+const { selectedPokemon } = useSelection();
 
 
   function TitleRow({name}: TitleRowProps) {

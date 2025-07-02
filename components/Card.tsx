@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useSearch } from "../context/SearchContext";
-import { PokemonGridDisplay } from "../interfaces/Pokemon";
 import { CardProps } from "../interfaces/CardProps";
 
 export default function Card({ pokemon , onClick }: CardProps) {

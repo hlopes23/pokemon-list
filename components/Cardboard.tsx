@@ -4,7 +4,7 @@ import { useSearch } from "../context/SearchContext";
 import { useSelection } from "../context/SelectContext";
 import Card from "./Card";
 import Image from "next/image";
-import { Pokemon, PokemonGridDisplay } from "../interfaces/Pokemon";
+import { PokemonGridDisplay } from "../interfaces/Pokemon";
 import { getPokemonByName } from "../utils/pokemon-data";
 
 

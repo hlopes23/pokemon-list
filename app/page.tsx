@@ -1,8 +1,5 @@
-
 import getPokemons from "../utils/pokemon-data";
 
-
-import { getPokemonByName } from "../utils/pokemon-data";
 import Cardboard from "../components/Cardboard";
 
 export default async function Home() {
