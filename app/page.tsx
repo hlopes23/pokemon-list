@@ -1,8 +1,9 @@
-import Cardboard from "../components/Cardboard";
+
 import getPokemons from "../utils/pokemon-data";
-import Image from "next/image";
 
 
+import { getPokemonByName } from "../utils/pokemon-data";
+import Cardboard from "../components/Cardboard";
 
 export default async function Home() {
 
