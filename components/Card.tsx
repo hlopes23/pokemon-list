@@ -22,19 +22,23 @@ export default function Card({ pokemon , onClick }: CardProps) {
   }
 
   return (
-    <div className="bg-white/20 h-[280px] w-[80%] border cursor-pointer border-white/30 rounded-lg shadow-lg p-4">
+    <div
+      className="bg-white/20 h-[280px] w-[80%] border cursor-pointer hover:scale-105 active:scale-95 border-white/30 rounded-lg shadow-lg p-4 transition-all duration-200 ease-in-out"
+      onClick={() => onClick(pokemon)}
+    >
       <div className="flex flex-col justify-between items-center rounded-md h-full">
-      <Image
-       src={pokemon.image}
-        alt={pokemon.name}
-        width={150}
-        height={150}
-        priority= {false}
-       className="mx-auto mb-3 h-[60%]"></Image>
-      <div className="text-lg p-4 text-center capitalize bg-white/20 rounded-md w-full mx-auto">
-        <p>{highlightName(pokemon.name, search)}</p>
+        <Image
+          src={pokemon.image}
+          alt={pokemon.name}
+          width={150}
+          height={150}
+          priority={false}
+          className="mx-auto mb-3 h-[60%]"
+        />
+        <div className="text-lg p-4 text-center capitalize bg-white/20 rounded-md w-full mx-auto">
+          <p>{highlightName(pokemon.name, search)}</p>
+        </div>
       </div>
-    </div>
     </div>
   );
 }

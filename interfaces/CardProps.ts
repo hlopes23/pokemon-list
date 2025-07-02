@@ -3,5 +3,5 @@ import { PokemonGridDisplay } from "../interfaces/Pokemon";
 
 export interface CardProps {
   pokemon: PokemonGridDisplay;
-  onClick?: (pokemon:PokemonGridDisplay) => void;
+  onClick: (pokemon:PokemonGridDisplay) => void;
 }

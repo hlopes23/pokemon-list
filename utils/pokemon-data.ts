@@ -8,6 +8,7 @@ function getPokemonIdFromUrl(url: string): number {
   return id ? parseInt(id) : 0;
 }
 
+
 export default async function getPokemons(): Promise<PokemonGridDisplay[]> {
   try {
     const response = await fetch("https://pokeapi.co/api/v2/generation/1/");
@@ -26,6 +27,7 @@ export default async function getPokemons(): Promise<PokemonGridDisplay[]> {
     throw error;
   }
 }
+
 
 export async function getPokemonByName(name: string): Promise<Pokemon>{
   try {

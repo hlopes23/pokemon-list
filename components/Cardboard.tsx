@@ -1,17 +1,30 @@
 "use client";
   
 import { useSearch } from "../context/SearchContext";
+import { useSelect } from "../context/SelectContext";
 import Card from "./Card";
 import Image from "next/image";
-import { PokemonGridDisplay } from "../interfaces/Pokemon";
+import { Pokemon, PokemonGridDisplay } from "../interfaces/Pokemon";
+import { getPokemonByName } from "../utils/pokemon-data";
+
 
 export default function Cardboard( {pokemons} : {pokemons : PokemonGridDisplay[]}) {
   const { search } = useSearch();
+  const {setSelectedPokemon} = useSelect();
 
   const filteredPokemons = pokemons.filter(pokemon =>
     pokemon.name.toLowerCase().includes(search.toLowerCase())
   );
 
+  const handleClick = async (pokemon: PokemonGridDisplay) => {
+    try {
+      const fetchedPokemon = await getPokemonByName(pokemon.name);
+      setSelectedPokemon(fetchedPokemon);
+      console.log("Selected Pokémon:", fetchedPokemon);
+    } catch (error) {
+      console.error("Failed to fetch Pokémon details:", error);
+    }
+  };
 
   return (
   
@@ -19,7 +32,7 @@ export default function Cardboard( {pokemons} : {pokemons : PokemonGridDisplay[]
     <div className=" h-full w-full overflow-scroll pt-2 justify-center">
     <div className="grid grid-cols-5 gap-4 justify-items-center"> 
       {filteredPokemons.map((pokemon) => (
-        <Card key={pokemon.id} pokemon={pokemon} />
+        <Card key={pokemon.id} pokemon={pokemon} onClick={() => handleClick(pokemon)} />
       ))}
       </div>
       </div>

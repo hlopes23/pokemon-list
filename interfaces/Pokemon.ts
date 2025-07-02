@@ -1,3 +1,5 @@
+import React from "react"
+
 export interface Pokemon {
     
     name: string
@@ -25,4 +27,18 @@ export interface PokemonGridDisplay {
 export type PokemonSpecies = {
     name: string
     url: string
+}
+
+export type InfoRowProps = {
+    label: string
+    value: React.ReactNode
+}
+
+export type TitleRowProps = {
+    name: string
+}   
+
+export type AditionalInfoProps = {
+    ability: string
+    hiddenAbility: string
 }
