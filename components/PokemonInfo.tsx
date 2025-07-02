@@ -36,7 +36,6 @@ import { InfoRowProps, TitleRowProps, AditionalInfoProps } from "../interfaces/P
   }
 
 export default function PokemonInfo() {
-
   const { selectedPokemon } = useSelection();
 
   return (  
