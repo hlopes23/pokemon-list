@@ -1,7 +1,7 @@
 "use client";
   
 import { useSearch } from "../context/SearchContext";
-import { useSelect } from "../context/SelectContext";
+import { useSelection } from "../context/SelectContext";
 import Card from "./Card";
 import Image from "next/image";
 import { Pokemon, PokemonGridDisplay } from "../interfaces/Pokemon";
@@ -10,7 +10,7 @@ import { getPokemonByName } from "../utils/pokemon-data";
 
 export default function Cardboard( {pokemons} : {pokemons : PokemonGridDisplay[]}) {
   const { search } = useSearch();
-  const {setSelectedPokemon} = useSelect();
+  const {setSelectedPokemon} = useSelection();
 
   const filteredPokemons = pokemons.filter(pokemon =>
     pokemon.name.toLowerCase().includes(search.toLowerCase())

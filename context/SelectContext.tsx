@@ -20,7 +20,7 @@ export function SelectContextProvider({ children }: { children: ReactNode }) {
   );
 }
 
-export function useSelect() {
+export function useSelection() {
   const context = useContext(SelectContext);
   if (context === undefined) {
     throw new Error("useSelect must be used within a SelectContextProvider");
