@@ -1,3 +1,4 @@
+
 import getPokemons from "../utils/pokemon-data";
 
 import Cardboard from "../components/Cardboard";
