@@ -3,9 +3,6 @@ import { useSelection } from "../context/SelectContext";
 import { InfoRowProps, TitleRowProps, AditionalInfoProps } from "../interfaces/Pokemon";
 
 
-const { selectedPokemon } = useSelection();
-
-
   function TitleRow({name}: TitleRowProps) {
     return (
       <div className="flex flex-row w-full justify-center mb-10 mt-10">
@@ -39,6 +36,8 @@ const { selectedPokemon } = useSelection();
   }
 
 export default function PokemonInfo() {
+
+  const { selectedPokemon } = useSelection();
 
   return (  
     <div className="w-[80%] h-[75%] m-auto border p-10 align-middle border-white bg-white/10 rounded-lg shadow-md relative">
