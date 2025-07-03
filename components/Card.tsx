@@ -3,8 +3,9 @@
 import Image from "next/image";
 import { useSearch } from "../context/SearchContext";
 import { CardProps } from "../interfaces/CardProps";
+import Link from "next/link";
 
-export default function Card({ pokemon , onClick }: CardProps) {
+export default function Card({ pokemon}: CardProps) {
   const { search } = useSearch();
 
 
@@ -21,23 +22,18 @@ export default function Card({ pokemon , onClick }: CardProps) {
   }
 
   return (
-    <div
-      className="bg-white/20 h-[280px] w-[80%] border cursor-pointer hover:scale-105 active:scale-95 border-white/30 rounded-lg shadow-lg p-4 transition-all duration-200 ease-in-out"
-      onClick={() => onClick(pokemon)}
-    >
-      <div className="flex flex-col justify-between items-center rounded-md h-full">
+    <Link className="bg-white/20 w-[80%] h-[250px] flex flex-col justify-between border cursor-pointer hover:scale-105 active:scale-95 border-white/30 rounded-lg shadow-lg p-4 transition-all duration-150 ease-in-out" href={`/pokemon-info/${pokemon.name}`}>
         <Image
           src={pokemon.image}
           alt={pokemon.name}
           width={150}
           height={150}
           priority={false}
-          className="mx-auto mb-3 h-[60%]"
+          className="mx-auto h-full max-h-[60%] object-contain"
         />
         <div className="text-lg p-4 text-center capitalize bg-white/20 rounded-md w-full mx-auto">
           <p>{highlightName(pokemon.name, search)}</p>
         </div>
-      </div>
-    </div>
+    </Link>
   );
 }
