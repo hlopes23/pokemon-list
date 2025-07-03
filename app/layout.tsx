@@ -2,7 +2,6 @@ import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import { SearchContextProvider } from "../context/SearchContext";
-import { SelectContextProvider } from "../context/SelectContext";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -24,9 +23,7 @@ export default function RootLayout({
         className={`${geistMono.className} antialiased`} >
       <SearchContextProvider>
         <Header />
-        <SelectContextProvider>
           {children}
-        </SelectContextProvider>
       </SearchContextProvider>
       </body>
     </html>
