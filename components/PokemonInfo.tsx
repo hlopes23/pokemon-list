@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { InfoRowProps, TitleRowProps, AditionalInfoProps, Pokemon } from "../interfaces/Pokemon";
+import { InfoRowProps, TitleRowProps, AditionalInfoProps } from "../interfaces/Pokemon";
 import { PokemonInfoProps } from "../interfaces/PokemonInfoProps";
 
 
