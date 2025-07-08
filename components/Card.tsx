@@ -22,7 +22,7 @@ export default function Card({ pokemon}: CardProps) {
   }
 
   return (
-    <Link className="bg-white/20 w-[80%] h-[250px] flex flex-col justify-between border cursor-pointer hover:scale-105 active:scale-95 border-white/30 rounded-lg shadow-lg p-4 transition-all duration-150 ease-in-out" href={`/pokemon-info/${pokemon.name}`}>
+    <Link className="bg-white/20 w-[80%] h-[250px] flex flex-col justify-between border cursor-pointer hover:scale-105 hover:bg-white/40 active:scale-95 border-white/30 rounded-lg shadow-lg p-4 transition-all duration-150 ease-in-out" href={`/pokemon-info/${pokemon.name}`}>
         <Image
           src={pokemon.image}
           alt={pokemon.name}
