@@ -1,13 +1,12 @@
+import { notFound } from "next/navigation";
 import { PokemonSpecies } from "../interfaces/Pokemon";
 import { PokemonGridDisplay } from "../interfaces/Pokemon";
 import { Pokemon } from "../interfaces/Pokemon";
-
 
 function getPokemonIdFromUrl(url: string): number {
   const id = url.split("/").filter(Boolean).pop();
   return id ? parseInt(id) : 0;
 }
-
 
 export default async function getPokemons(): Promise<PokemonGridDisplay[]> {
   try {
@@ -28,20 +27,17 @@ export default async function getPokemons(): Promise<PokemonGridDisplay[]> {
   }
 }
 
-
-export async function getPokemonByName(name: string): Promise<Pokemon>{
+export async function getPokemonByName(name: string): Promise<Pokemon> {
   try {
-
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
-    if (!response.ok)
-      throw new Error(`Error fetching data for ${name}. Status: ${response.status}`);
+    if (!response.ok) {
+      notFound();
+    }
     const data = await response.json();
     return dataToPokemon(data);
-
   } catch (error) {
-    console.error(error);
-    throw error;
-  } 
+    throw error; 
+  }
 }
 
 export function dataToPokemon(data: any): Pokemon {

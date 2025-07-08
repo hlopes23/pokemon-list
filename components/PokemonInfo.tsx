@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { InfoRowProps, TitleRowProps, AditionalInfoProps } from "../interfaces/Pokemon";
 import { PokemonInfoProps } from "../interfaces/PokemonInfoProps";
+import Link from "next/link";
 
 
   function TitleRow({name}: TitleRowProps) {
@@ -39,22 +40,23 @@ export default function PokemonInfo({pokemon}: PokemonInfoProps) {
   
   return (  
     <div className="w-[80%] h-[75%] m-auto border p-10 align-middle border-white bg-white/10 rounded-lg shadow-md relative">
+      <Link href='/'>
       <Image
         src="/arrow-down.png"
         alt="Arrow Logo"
         width={30}
         height={30}
-        className=" ml-6 mt-10 h-auto w-auto absolute top-0 left-0 self-center animate-bounce hover:scale-110 cursor-pointer rotate-90  transition-all duration-300"
+        className="ml-6 mt-10 absolute top-0 left-0 animate-bounce cursor-pointer rotate-90  transition-all duration-300"
       />
+      </Link>
     <div className=" flex flex-row p-4 h-full w-full gap-50"> 
     <div className=" w-[50%] flex flex-row justify-center items-center">
       <Image
         src={pokemon?.image ?? ""}
         alt="Pokemon"
-        width={450}
-        height={100}
+        width={320}
+        height={0}
         priority={true}
-        className=""
       />
     </div>
     <div className=" bg-white/20 w-[50%] rounded-xl flex flex-col justify-evenly pb-10">

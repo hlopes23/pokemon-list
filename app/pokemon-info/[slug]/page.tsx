@@ -8,7 +8,6 @@ export default async function PokemonInfoPage({
 }): Promise<React.ReactNode> {
 
   const fetchedPokemon = await getPokemonByName((await params).slug);
-  console.log("Selected Pokémon:", fetchedPokemon);
 
   return (
     <PokemonInfo pokemon={fetchedPokemon}/>
