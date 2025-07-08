@@ -8,5 +8,5 @@ export default async function Home() {
   return (
   <Cardboard pokemons={pokemons}/>
   );
-
+  
 }

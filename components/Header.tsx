@@ -10,7 +10,7 @@ const { search, setSearch } = useSearch();
 
 
   return (
-    <header className="flex flex-col lg:flex-row h-auto justify-center lg:justify-around items-center backdrop-blur-md mt-8 mb-8">
+    <header className="flex flex-col lg:flex-row h-auto justify-center lg:justify-around items-center backdrop-blur-md mt-8 mb-8 dark:text-white">
         <Image
           src="/logo.png"
           alt="Pokemon Logo"

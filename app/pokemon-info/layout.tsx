@@ -11,6 +11,6 @@ export default function PokemonInfoLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className={`${geistMono.className} antialiased h-screen`}>{children}</div>
+  return <div className={`${geistMono.className} antialiased h-[100vh] overflow-hidden`}>{children}</div>
         
 }
