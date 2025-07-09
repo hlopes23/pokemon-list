@@ -37,35 +37,6 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Project Structure
-
-```
-pokemon-list/
-├── app/                          # Next.js App Router
-│   ├── globals.css              # Global styles
-│   ├── layout.tsx               # Root layout with header
-│   ├── page.tsx                 # Homepage with Pokémon grid
-│   └── pokemon-info/            # Pokémon detail routes
-│       └── [slug]/
-│           ├── page.tsx         # Individual Pokémon page
-│           └── not-found.tsx    # Custom 404 page
-├── components/                   # Reusable React components
-│   ├── Card.tsx                 # Pokémon card component
-│   ├── Cardboard.tsx            # Grid container
-│   ├── Header.tsx               # Navigation header
-│   ├── Input.tsx                # Search input
-│   └── PokemonInfo.tsx          # Detailed Pokémon information
-├── context/                      # React Context providers
-│   └── SearchContext.tsx        # Search state management
-├── interfaces/                   # TypeScript type definitions
-│   ├── CardProps.ts
-│   ├── InputProps.ts
-│   ├── Pokemon.ts
-│   └── PokemonInfoProps.ts
-└── utils/                        # Utility functions
-    └── pokemon-data.ts           # API functions and data transformation
-```
-
 ## How to Use
 
 1. **Browse Pokémon**: View all Generation 1 Pokémon on the homepage
