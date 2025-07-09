@@ -9,18 +9,19 @@ import AdditionalInfo from "./AdditionalInfo";
 export default function PokemonInfo({pokemon}: PokemonInfoProps) {
   
   return (  
-    <div className="w-[80%] h-[75%] m-auto border p-10 align-middle border-white bg-white/10 rounded-lg shadow-md relative">
+    <div className=" w-[80%] lg:w-[80%] h-[45dvh] lg:h-[75%] mt-15 lg:mt-0 m-auto border lg:p-10 align-middle border-white bg-white/10 rounded-lg shadow-md relative">
       <Link href='/'>
       <Image
         src="/arrow-down.png"
         alt="Arrow Logo"
         width={30}
         height={30}
+        priority={true}
         className="ml-6 mt-10 absolute top-0 left-0 animate-bounce cursor-pointer rotate-90  transition-all duration-300"
       />
       </Link>
-    <div className=" flex flex-row p-4 h-full w-full justify-center"> 
-    <div className=" w-[50%] h-full flex flex-row justify-center my-auto">
+    <div className=" flex flex-col lg:flex-row p-4 h-full w-full items-center lg:justify-center"> 
+    <div className=" w-[25%] lg:w-[50%] lg:h-full flex flex-col lg:flex-row lg:justify-center justify-start self-center mb-4 lg:my-auto">
       <Image
         src={pokemon?.image ?? ""}
         alt="Pokemon"
@@ -30,7 +31,7 @@ export default function PokemonInfo({pokemon}: PokemonInfoProps) {
         className=""
       />
     </div>
-    <div className=" bg-white/20 w-[50%] rounded-xl flex flex-col justify-evenly pb-10">
+    <div className=" bg-white/20 w-full h-[75%] lg:h-full lg:w-[50%] rounded-xl flex flex-col justify-evenly pb-10">
       <TitleRow name={pokemon?.name ?? ""} />
       <InfoRow label="type" value={pokemon?.type} />
       <InfoRow label="hp" value={pokemon?.hp}/>
