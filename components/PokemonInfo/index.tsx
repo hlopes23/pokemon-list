@@ -17,21 +17,21 @@ export default function PokemonInfo({pokemon}: PokemonInfoProps) {
         width={30}
         height={30}
         priority={true}
-        className="ml-6 mt-10 absolute top-0 left-0 animate-bounce cursor-pointer rotate-90  transition-all duration-300"
+        className=" hidden lg:block ml-2 mt-6 lg:ml-6 lg:mt-10 absolute top-0 left-0 animate-bounce cursor-pointer rotate-90  transition-all duration-300"
       />
       </Link>
-    <div className=" flex flex-col lg:flex-row p-4 h-full w-full items-center lg:justify-center"> 
-    <div className=" w-[25%] lg:w-[50%] lg:h-full flex flex-col lg:flex-row lg:justify-center justify-start self-center mb-4 lg:my-auto">
+    <div className=" flex flex-col lg:flex-row p-4 h-full w-full items-center justify-evenly lg:justify-center"> 
+    <div className=" w-[15%] lg:w-[50%] lg:h-full flex flex-col lg:flex-row lg:justify-center self-center my-auto">
       <Image
         src={pokemon?.image ?? ""}
         alt="Pokemon"
         width={300}
-        height={300}
+        height={0}
         priority={true}
         className=""
       />
     </div>
-    <div className=" bg-white/20 w-full h-[75%] lg:h-full lg:w-[50%] rounded-xl flex flex-col justify-evenly pb-10">
+    <div className=" bg-white/20 w-full h-full lg:h-full lg:w-[50%] rounded-xl flex flex-col justify-evenly lg:pb-10">
       <TitleRow name={pokemon?.name ?? ""} />
       <InfoRow label="type" value={pokemon?.type} />
       <InfoRow label="hp" value={pokemon?.hp}/>

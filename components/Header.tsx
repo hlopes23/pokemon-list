@@ -10,7 +10,7 @@ const { search, setSearch } = useSearch();
 
 
   return (
-    <header className="flex flex-col lg:flex-row h-auto gap-10 justify-around items-center backdrop-blur-md mt-8 lg:mb-8 dark:text-white">
+    <header className="flex flex-col lg:flex-row h-auto lg:gap-10 justify-around items-center backdrop-blur-md mt-2 lg:mb-8 dark:text-white">
         <Image
           src="/logo.png"
           alt="Pokemon Logo"
@@ -18,7 +18,7 @@ const { search, setSearch } = useSearch();
           width={250}
           height={250}
         />
-      <div className="text-center text-sm md:text-lg lg:text-md mx-16">
+      <div className="text-center text-sm mt-2 mb-8 md:text-lg lg:text-md mx-16">
         <p className="m-0">
           PICK A POKÉMON FROM THE ADVENTURES <strong>RED, GREEN,</strong>
         </p>
